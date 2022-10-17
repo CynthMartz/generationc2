@@ -9,12 +9,55 @@
 <body>
     <script>
         //conjunto de datos, ordenados segun su ingreso . separados por coma
-        // arreglo: tamaño definido
+        // arreglo (arrays): tamaño definido
+        // TODOS LOS ARREGLOS COMIENZAN EN LA POSICION 0 (CERO)
         //lista: tamaño dinamico
 
+        var vocales = ["a","u","i","o","e"]
+        //tiene 5 elementos, el último está en la posición 4
+        // el primero en la posición 0
+
+        console.log(vocales);
+        //length -> cantidad de elementos o tamaño del arreglo
+
+        console.log(vocales[0],vocales[1],vocales[2],vocales[3],vocales[4],vocales[-1]);
+        console.log(vocales[4-2])
+
+        //reasignar
+        vocales[1]="y";
+        console.log(vocales);
+
+        //push agrega un dato al final
+        vocales.push("i");
+        console.log(vocales)
+
+        //pop elimina el ultimo dato del arreglo
+        vocales.pop();
+        console.log(vocales)
+
+        vocales.pop();
+        vocales.pop();
+        vocales.pop();
+        vocales.pop();
+        vocales.pop();
+        console.log(vocales)
+
+        var arreglo1 = []; //arreglo vacío
+        // el tamaño es 0
+        console.log(arreglo1.length);
+        arreglo1.push(1);
+        arreglo1.push(8);
+
+        var ultimo = arreglo1.pop();
+        console.log(ultimo)
 
 
+        //ejemplos
+        //vocales="aeiuo"
+        //console.log(vocales)
+        //console.log("string" ,vocales[3])
 
+       
 
 
     </script>
