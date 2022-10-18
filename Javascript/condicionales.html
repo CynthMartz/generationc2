@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Condicional</title>
 </head>
 <body>
     <script>
@@ -14,12 +14,65 @@
         si la condicional es verdadera ingresara al if
         condicion == true
 
-        if()
+        if(condicion){
+        //dentro del if
+        }
         */
 
+        var edad = parseInt(prompt("Ingresa tu edad",0))
 
+        if(edad >= 18){
+            console.log("Es mayor de edad")
+        }
+
+        if(edad < 18){
+            console.log("Es menor de edad")
+        }   
+
+       //else
+        if(edad >= 18){
+            console.log("Es mayor de edad")
+        }else{
+            console.log("Es menor de edad")
+        }
+
+        console.log("******************************")
+        //alternativa
+
+        if(edad <18){
+            console.log("Es menor de edad")
+        }else{
+            console.log("Es mayor de edad")
+        } 
+
+        /* validar si un numero es mayor a 10 y menor a 20*/
+        var num = parseInt(prompt("ingresa un numero",0));
+
+        //conectores && (y), || (es inclusivo) (o)
+        //numero > 10; numero <10; numero > 20; numero <20
+        //numero=10 ; numero=20
+        if(num>10 && num<20){    
+            console.log("el número está en el rango ")
+        }else{
+            console.log("no está dentro del rango")
+        }
+        //validar si un numero es mayor o menor o igual a cero
+        var numero = parseInt(prompt("ingresa un nuevo número",0));
+        if(numero==0){
+            console.log("El número es igual a cero")
+        }else if(numero > 0){
+            console.log("El número es mayor a cero")
+        }else{
+            console.log("El número es negativo")
+        }
 
 
     </script>
 </body>
 </html>
+
+
+lo del menu ahora solicitar esos datos al usuario
+nombre apeelido edad direccion correo 
+validar si es mayor de edad
+entregar un mensaje
