@@ -9,10 +9,72 @@
 <body>
     <script>
         //funciones
+        //trozos de codigo, que solo se ejecutara cuando sea llamado
+        //realiza una accion especifica
+
+        function nombre_funcion(params) {
+            //accion o codigo a ejecutar
+        }
+        //llamada a la cuncion
+        nombre_funcion();
+
+        function ejemplo(){
+            console.log("Estoy dentro de la funcion");
+        }
+        ejemplo();
+
+        function imprimir(cantidad){
+
+        }
 
 
 
+        var numero_impar=1;
 
+        function imprimirImpar(impar){
+            console.log("impar",impar);
+            console.log("numero_impar",numero_impar);
+            numero_impar=3;
+        }
+        imprimirImpar(numero_impar);
+        console.log("nuevo numero_impar",numero_impar);
+
+        //Return
+
+        function sumaNumeros(){
+            console.log(numero_impar+4);//console.log (3+4)
+            return numero_impar+4; //return 7;
+        }
+        var numeroRetornado = sumaNumeros(); //llamado a la function
+        //var numeroRetornado =7; 
+        console.log("Numero retornado", numeroRetornado)
+
+        function sumaImpar(){
+            return 3+5;
+        }
+        var Impares = sumaImpar();
+        console.log("suma de impares", Impares) //8
+        console.clear();
+
+        function multiplicacion(numero1, numero2){
+            return numero1*numero2;
+        }
+
+        var resultadomultiplicacion= multiplicacion(34,76);
+        console.log("El resultado es", resultadomultiplicacion)
+
+        function crearNuevoArreglo(numero){
+            var arreglo = []; //[0,1,2]
+            for(let i=0; i<= numero;i++){
+                arreglo.push(i);
+            }
+            return arreglo;
+        
+        }
+
+        var miArreglo = crearNuevoArreglo(6); //el resultado 
+        console.log("mi arreglo",miArreglo)
+        
     </script>
 </body>
 </html>
