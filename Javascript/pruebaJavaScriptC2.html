@@ -9,12 +9,12 @@
 <body>
     <script>
         //obs: los días se deben ingresar como tipo String y los valores de los productos a comprar se deben trabajar con arreglos, por ejemplo = [1000,500,650,8000]
-        var dias = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"]
-        var productos = [200,5500,900,7000,500,300]
+        /*var dias = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"]
+        var productos = [200,5500,900,7000,500,300]*/
 
         // Don José todos los martes y jueves realiza un 20% de descuento en el total de las compras, crea una función la cual debe recibir un parámetro del día y el arreglo de valores de los productos a comprar, esta debe retornar el total final de la compra según corresponda o no descuento.
         
-        function descuento20(desc_mar_jue){
+        /*function descuento20(desc_mar_jue){
             var valor = [];
             for(let i=0; i<= desc_mar_jue;i++){
                 valor.push(i);
@@ -23,7 +23,31 @@
         
         }
         var resultado = descuento20();
-        console.log("Mis compras", resultado)
+        console.log("Mis compras", resultado)*/
+
+
+        var dia= "domingo";//"LUNES"//1=lunes.. 2=martes y 4=jueves ; MaRtEs -> martes
+        dia= dia.toLowerCase();
+        var productos = [1000,500,650,8000,2,8];//10150
+
+        function calculoTotalCompra(pDia,pValoresProductos){//pDia="lunes";pValoresProductos=[1000,500,650,8000];
+            var totalFinalCompra=0;
+            var sumaProductos=0;
+            for(let i = 0; i < pValoresProductos.length;i++){
+                sumaProductos = sumaProductos + pValoresProductos[i];
+            }
+            if(pDia.toLowerCase()=="martes" || pDia.toLowerCase()=="jueves"){
+                totalFinalCompra = sumaProductos-(sumaProductos*0.2)//10150-10150*0.2 o sumaProductos*0.8
+                //totalFinalCompra =sumaProductos*0.8
+            }else{
+                totalFinalCompra = sumaProductos;
+            }
+
+            return totalFinalCompra;
+        }
+        var total= calculoTotalCompra(dia,productos);
+        console.log("El total de la compra es",total);
+        
 
 
 //Don José hace un 5% de descuento a los clientes que compran más de 3 productos y al menos uno de ellos tiene un valor mayor a 10.000, realiza una función que calcule el total verificando si corresponde o no el descuento.
@@ -35,7 +59,7 @@
 
 // Se desea tener una función verificadora encargada de revisar si dentro de el arreglo de valores de los productos a comprar no existan valores negativos ingresados por error, en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar un mensaje de error junto con el número negativo y el índice en el que se encontraba.
 
-       /* var valores = parseInt(prompt("ingresa un valor",0));
+        /*var valores = parseInt(prompt("ingresa un valor",0));
 
         if(valores <=0){    
             console.log("Éxito")
@@ -56,16 +80,14 @@
 				mayor = arreglo[i];
 			}
 		}
-		console.log(mayor);
-
-        var arreglo=[200,5500,900,7000,500,300];
+		console.log("Mayor precio",mayor);
         var menor = arreglo[0];
 		for (var i =1; i > arreglo.length; i++) {
 			if (arreglo[i] > menor) {
 				menor = arreglo[i];
 			}
 		}
-		console.log(menor);
+		console.log("Menor precio",menor);
     </script>
 </body>
 </html>
