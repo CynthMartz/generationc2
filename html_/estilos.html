@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos CSS</title>
+    <style>
+        /*resetear las distancias o separaciones entre 2 elementos*/
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*3 formas de asignar estilos*/
+        /*1= a traves del elemento(etiqueta)*/
+        /*estilo de TODOS los elemento(etiqueta)*/
+        p{ 
+            color: green;
+            background-color: yellow;
+        }
+        div{ 
+            color: red;
+            background-color: aquamarine;
+            width: 200px;
+            height: 200px;
+        }
+        a{ 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2em;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        /*2= a traves de clases . */
+        /* estilo a 1 ó mas elementos*/
+        .parrafo11{
+            color: blueviolet !important;
+            background-color: blanchedalmond;
+        }
+
+        /*3= a traves del id # */
+        /*el estilo solo se aplica a un elemento */
+        #parrafo44{
+            color: yellowgreen;
+            background-color: blue;
+        }
+
+        #padre{
+            background-color: salmon;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+        }
+        #hijo{
+            background-color: blueviolet;
+            width: 30px;
+            height: 30px;
+            border: 1px;
+            margin-top: 60px;
+            margin-left: 20px;
+        }
+        #hijo1{
+            background-color: blueviolet;
+            width: 30px;
+            height: 30px;
+            border: 1px;
+            margin-top: -30px;
+            margin-left: 110px;
+        }
+        #hijo2{
+            background-color: blue;
+            width: 30px;
+            height: 30px;
+            border: 1px;
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+
+        #hijo3{
+            background-color: blueviolet;
+            width: 130px;
+            height: 30px;
+            border: 1px;
+            margin-top: -10px;
+            margin-left: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--3  formas de asignar estilos -->
+    <div> 
+        <p>parrafo 1</p>
+        <p class="parrafo11">parrafo 2</p>
+        <p class="parrafo11">parrafo 3</p>
+        <p class="parrafo11" id="parrafo44">parrafo 4</p>
+        <a href="https://www.youtube.com/watch?v=zLfnsYf4Vi4">Musica</a>
+    </div>
+    <h2>Margin y Padding</h2>
+    <div id="padre">
+        <div id="hijo"></div>
+        <div id="hijo1"></div>
+        <div id="hijo2"></div>
+        <br>
+        <div id="hijo3"></div>
+    </div>
+</body>
+</html>
